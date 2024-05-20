@@ -1,4 +1,4 @@
-# IaC-AWS
+# Infrastructure as Code On AWS 
 # README for Terraform Project: Create EC2 on AWS with Security Group
 
 ## Project Overview
