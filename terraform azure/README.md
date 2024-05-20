@@ -1,4 +1,4 @@
-# IaC-Azure
+# Infrastructure as Code On Azure
 # README for Terraform Project: Create VM on Azure with Security Group
 
 ## Project Overview
