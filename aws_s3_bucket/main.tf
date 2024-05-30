@@ -1,3 +1,4 @@
+
 resource "aws_s3_bucket" "moodle" {
   bucket = "moodle-backup"
 }
@@ -10,9 +11,7 @@ resource "aws_s3_bucket_policy" "moodle_policy" {
     Statement = [
       {
         Effect   = "Allow"
-        Principal = {
-          AWS = "*"
-        }
+        Principal = "*"
         Action   = "s3:*"
         Resource = [
           "${aws_s3_bucket.moodle.arn}",
