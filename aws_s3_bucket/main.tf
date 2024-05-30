@@ -1,23 +1,34 @@
 
+
 resource "aws_s3_bucket" "moodle" {
-  bucket = "moodle-backup"
+  bucket = "insigth-learn-backup"
 }
 
-resource "aws_s3_bucket_policy" "moodle_policy" {
-  bucket = aws_s3_bucket.moodle.id
 
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect   = "Allow"
-        Principal = "*"
-        Action   = "s3:*"
-        Resource = [
-          "${aws_s3_bucket.moodle.arn}",
-          "${aws_s3_bucket.moodle.arn}/*"
-        ]
-      }
-    ]
-  })
+resource "aws_s3_object" "moodledb" {
+  bucket = aws_s3_bucket.moodle.bucket
+  key    = "MoodleDB/"
+  acl    = "private"
 }
+
+resource "aws_s3_object" "morphcast" {
+  bucket = aws_s3_bucket.moodle.bucket
+  key    = "Morphcast/"
+  acl    = "private"
+}
+
+
+
+
+resource "aws_s3_object" "whole_project" {
+  bucket = aws_s3_bucket.moodle.bucket
+  key    = "whole_project/"
+  acl    = "private"
+}
+
+/*
+resource "aws_s3_object" "folder" {
+  bucket = aws_s3_bucket.moodle.bucket
+  key    = "your-folder-name/" # Folder name ending with a slash
+  acl    = "private"
+}*/
