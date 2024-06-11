@@ -44,16 +44,9 @@ o	An open-source IaC tool that supports multiple cloud providers including AWS, 
 
 Terraform
 Terraform is an open-source IaC tool created by HashiCorp. It allows for the provisioning of infrastructure across various cloud providers using a simple, declarative language.
-Example: 
 
 
 
-This code defines the cloud provider configuration and securely manages my credentials.
-
- 
-This code is used to create the entire infrastructure on Azure.
- 
-This code is used to create an S3 Bucket on AWS.
 Deployment Process
 1.	Provisioning Infrastructure:
 •	Define the infrastructure in Terraform configuration files.
@@ -69,7 +62,7 @@ Automated Backup
 Bash Script:
 •	A plain text file with a series of commands written in the Bash scripting language.
 •	Used to automate tasks, run sequences of commands, and perform complex operations without manual intervention.
-•	Script Example:
+
 
 
  
@@ -77,6 +70,7 @@ Cron Job:
 •	A time-based job scheduler in Unix-like operating systems.
 •	Schedules jobs to run periodically at fixed times, dates, or intervals.
 •	Example Cron Job:
+![image](https://github.com/AMMA02/IaC/assets/131775951/ed3e8622-76ed-4158-b17c-dcdced21f96d)
 
 
 This is scheduled to run a backup script at midnight on the first day of every month. The script changes the directory to /home/azureuser/, executes the backup_to_s3-3db.sh script, and saves the output to a log file named backup-log.txt.
