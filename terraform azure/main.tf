@@ -1,3 +1,4 @@
+
 resource "azurerm_resource_group" "moodle" {
   name     = "moodle"
   location = "East US"
